@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Undangan Pernikahan - Isma & Akmal</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- AOS Animation CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..700;1,400..700&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .font-serif { font-family: 'Playfair Display', serif; }
+        
+        #cover-screen {
+            transition: transform 1.2s cubic-bezier(0.77, 0, 0.175, 1);
+        }
+        .cover-opened {
+            transform: translateY(-100vh);
+        }
+    </style>
+</head>
+<body class="bg-stone-50 text-stone-800 antialiased overflow-hidden">
+
+    <!-- ================= COVER / SAMPUL AWAL ================= -->
+    <div id="cover-screen" class="fixed inset-0 z-50 flex flex-col items-center justify-center bg-stone-900">
+        <!-- Background Foto Bersama -->
+        <div class="absolute inset-0 bg-[url('akmal dan isma.jpg')] bg-cover bg-center opacity-40"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-stone-950 via-stone-900/60 to-transparent"></div>
+        
+        <div class="relative z-10 text-center px-6 text-white w-full max-w-md">
+            <p class="uppercase tracking-[0.3em] text-xs font-medium mb-6 text-stone-300">The Wedding Of</p>
+            <h1 class="font-serif text-6xl md:text-7xl italic font-medium mb-8">Isma & Akmal</h1>
+            
+            <div class="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20 mb-8">
+                <p class="text-sm text-stone-300 mb-2">Kepada Yth.</p>
+                <p class="font-semibold text-lg">Dimas</p>
+            </div>
+
+            <!-- Tombol Buka Undangan -->
+            <button onclick="openInvitation()" class="inline-flex items-center gap-2 bg-white text-stone-900 font-semibold px-8 py-3 rounded-full shadow-lg hover:scale-105 transition-transform duration-300">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-5 h-5">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" />
+                </svg>
+                Buka Undangan
+            </button>
+        </div>
+    </div>
+
+    <!-- ================= ISI UNDANGAN ================= -->
+    <main>
+        <!-- Hero Section -->
+        <section class="relative min-h-screen flex items-center justify-center pt-20 pb-10 px-6">
+            <div class="text-center" data-aos="zoom-in" data-aos-duration="1500">
+                <p class="uppercase tracking-widest text-sm text-stone-500 mb-4">Pernikahan Kami</p>
+                <h2 class="font-serif text-5xl md:text-6xl italic text-stone-800 mb-8">Isma & Akmal</h2>
+                
+                <!-- Foto Bersama -->
+                <div class="w-64 h-80 md:w-80 md:h-96 mx-auto overflow-hidden rounded-t-full rounded-b-2xl shadow-xl border-8 border-white">
+                    <img src="akmal dan isma.jpg" alt="Isma dan Akmal" class="w-full h-full object-cover">
+                </div>
+            </div>
+        </section>
+
+        <!-- Kutipan Ayat -->
+        <section class="py-20 px-6 bg-stone-200/50 text-center">
+            <div class="max-w-2xl mx-auto" data-aos="fade-up">
+                <span class="text-stone-400 text-3xl font-serif">❝</span>
+                <p class="text-stone-600 leading-relaxed italic mt-4 mb-6">
+                    "Dan di antara tanda-tanda kebesaran-Nya ialah Dia menciptakan pasangan-pasangan untukmu dari jenismu sendiri, agar kamu cenderung dan merasa tenteram kepada-Nya..."
+                </p>
+                <p class="text-xs font-bold tracking-widest uppercase text-stone-500">(QS. Ar-Rum: 21)</p>
+            </div>
+        </section>
+
+        <!-- Profil Mempelai -->
+        <section class="py-24 px-6 text-center">
+            <h2 class="font-serif text-4xl italic mb-16 text-stone-800" data-aos="fade-up">Mempelai Bahagia</h2>
+            
+            <div class="max-w-4xl mx-auto grid md:grid-cols-2 gap-16 items-center">
+                
+                <!-- Mempelai Wanita (Isma) -->
+                <div class="space-y-6" data-aos="fade-right">
+                    <div class="w-48 h-48 mx-auto rounded-full overflow-hidden shadow-lg border-4 border-stone-200">
+                        <!-- Perbaikan: Gambar sekarang diposisikan persis di tengah (object-center) -->
+                        <img src="isma.jpg" alt="Isma" class="w-full h-full object-cover object-center">
+                    </div>
+                    <div>
+                        <h3 class="font-serif text-3xl font-medium mb-2">Isma</h3>
+                        <p class="text-sm text-stone-500">Putri dari Kel. Bapak [Nama Ayah] & Ibu [Nama Ibu]</p>
+                        <a href="#" class="inline-block mt-3 text-stone-400 hover:text-stone-600 text-sm">@instagram_isma</a>
+                    </div>
+                </div>
+
+                <!-- Mempelai Pria (Akmal) -->
+                <div class="space-y-6" data-aos="fade-left">
+                    <div class="w-48 h-48 mx-auto rounded-full overflow-hidden shadow-lg border-4 border-stone-200">
+                        <!-- Perbaikan: Gambar sekarang diposisikan persis di tengah (object-center) -->
+                        <img src="akmal.jpg" alt="Akmal" class="w-full h-full object-cover object-center">
+                    </div>
+                    <div>
+                        <h3 class="font-serif text-3xl font-medium mb-2">Akmal</h3>
+                        <p class="text-sm text-stone-500">Putra dari Kel. Bapak [Nama Ayah] & Ibu [Nama Ibu]</p>
+                        <a href="#" class="inline-block mt-3 text-stone-400 hover:text-stone-600 text-sm">@instagram_akmal</a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Jadwal Acara -->
+        <section id="acara" class="py-24 px-6 bg-stone-900 text-stone-100 text-center rounded-t-3xl">
+            <h2 class="font-serif text-4xl italic mb-12" data-aos="fade-up">Rangkaian Acara</h2>
+
+            <div class="max-w-3xl mx-auto grid md:grid-cols-2 gap-8">
+                <!-- Akad -->
+                <div class="bg-stone-800 p-8 rounded-2xl border border-stone-700" data-aos="zoom-in-up" data-aos-delay="100">
+                    <div class="w-12 h-12 mx-auto bg-stone-700 rounded-full flex items-center justify-center mb-4">💍</div>
+                    <h3 class="font-serif text-2xl mb-4">Akad Nikah</h3>
+                    <p class="font-medium text-stone-300">Sabtu, 14 November 2026</p>
+                    <p class="text-sm text-stone-400 mb-4">Pukul 08.00 WIB - Selesai</p>
+                    <p class="text-sm text-stone-300">[Lokasi Akad / Masjid]</p>
+                </div>
+
+                <!-- Resepsi -->
+                <div class="bg-stone-800 p-8 rounded-2xl border border-stone-700" data-aos="zoom-in-up" data-aos-delay="200">
+                    <div class="w-12 h-12 mx-auto bg-stone-700 rounded-full flex items-center justify-center mb-4">🥂</div>
+                    <h3 class="font-serif text-2xl mb-4">Resepsi</h3>
+                    <p class="font-medium text-stone-300">Sabtu, 14 November 2026</p>
+                    <p class="text-sm text-stone-400 mb-4">Pukul 11.00 WIB - Selesai</p>
+                    <p class="text-sm text-stone-300">[Lokasi Gedung Resepsi]</p>
+                </div>
+            </div>
+            
+            <div class="mt-12" data-aos="fade-up">
+                <a href="#" class="inline-block bg-white text-stone-900 font-semibold px-8 py-3 rounded-full hover:bg-stone-200 transition">Lihat Peta Lokasi (Google Maps)</a>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="py-10 text-center bg-stone-950 text-stone-500 text-xs">
+            <p class="font-serif text-lg italic text-stone-300 mb-4">Terima kasih atas doa & restunya.</p>
+            <p>Kami yang berbahagia,</p>
+            <p class="font-semibold text-stone-400 mt-1">Isma & Akmal</p>
+        </footer>
+    </main>
+
+    <!-- AOS Animation JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            once: true,
+            offset: 50,
+        });
+
+        function openInvitation() {
+            document.getElementById('cover-screen').classList.add('cover-opened');
+            document.body.classList.remove('overflow-hidden');
+        }
+    </script>
+</body>
+</html>
